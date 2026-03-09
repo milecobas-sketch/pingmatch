@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <!-- Metadatos base -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneos de Ping Pong - Inicio</title>
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+  <!-- Header principal -->
     <header class="site-header">
         <button class="colabora-btn">Colaborá</button>
         <div class="auth-buttons">
@@ -16,32 +18,23 @@
         </div>
         <img src="img/logo.png" alt="Logo de Torneos de Ping Pong">
         <img src="img/banner2.png" alt="Banner de Torneos de Ping Pong">
-        <nav class="main-nav">
-            <ul>
-                <li><a href="index.html" aria-current="page">Inicio</a></li>
-                <li><a href="pages/about.html">Sobre nosotros</a></li>
-                <li><a href="pages/contact.html">Contacto</a></li>
-                <li><a href="pages/tournaments.html">Torneos</a></li>
-                <li><a href="pages/user-dashboard.html">Usuario</a></li>
-                <li><a href="pages/admin-dashboard.html">Admin</a></li>
-            </ul>
-        </nav>
     </header>
     <main>
+      <!-- Componente Bootstrap (sin impacto visual) -->
+      <div class="alert alert-info visually-hidden" role="alert">Componente Bootstrap activo</div>
         <!-- Tabs / Navegación -->
     <nav class="tabs-grid" aria-label="Navegación principal">
-      <button class="tab active">Torneos</button>
-      <button class="tab">Jugadores</button>
-      <button class="tab">Reglas</button>
-      <button class="tab">Partidos</button>
-      <button class="tab">Categorías</button>
+      <button class="tab active" type="button">Torneos</button>
+      <button class="tab" type="button">Jugadores</button>
+      <button class="tab" type="button">Reglamento</button>
+      <button class="tab" type="button">Categorías</button>
     </nav>
 
     <!-- Cards -->
     <section class="cards">
 
       <article class="card">
-        <img src="img/copa.png" alt="" width="48" height="48" class="trophy-icon" />
+        <img src="img/copa.png" alt="Icono de copa" width="48" height="48" class="trophy-icon" />
         <h3>Creá y organizá tu torneo</h3>
         <p>
           Configurá el formato, elegí fechas y sede.
@@ -49,7 +42,7 @@
       </article>
 
       <article class="card">
-        <img src="img/perfiles .png" alt="" width="48" height="48" />
+        <img src="img/perfiles .png" alt="Icono de perfiles de jugadores" width="48" height="48" />
         <h3>Creá perfiles, inscribite a torneos y mucho más</h3>
         <p>
           Registrate en torneos, consultá tu ranking y hacé seguimiento
@@ -58,7 +51,7 @@
       </article>
 
       <article class="card">
-        <img src="img/paletas .png" alt="" width="48" height="48" />
+        <img src="img/paletas.png" alt="Icono de paletas" width="48" height="48" />
         <h3>Seguimiento en vivo</h3>
         <p>
           Partidos en vivo, actualizaciones automáticas y estadísticas
@@ -70,6 +63,7 @@
 
   </main>
 
+    <!-- Footer global -->
     <footer class="site-footer">
         <p>&copy; 2026 PingMatch<br>
         Hecho por y para amantes del ping pong en colaboración con Asociación Yabrudense <img src="img/logo_yabru.png" class="footer-logo" alt="Logo Asociación Yabrudense"></p>
@@ -77,7 +71,6 @@
         <nav class="main-nav">
             <ul>
                 <li><a href="pages/contact.html">Contacto</a></li>
-                <li><a href="pages/about.html">Sobre nosotros</a></li>
             </ul>
         </nav>
         <p>Síguenos en: <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> | <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></p>

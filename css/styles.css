@@ -91,6 +91,11 @@ body {
     gap: 10px;
 }
 
+  .auth-buttons a {
+    text-decoration: none;
+    display: inline-block;
+  }
+
 .login-btn {
     background-color: white;
     color: #0a2d8d;
@@ -270,11 +275,82 @@ section, aside {
   margin: 0 auto;
 }
 
+.tournaments-cards {
+  max-width: 100%;
+  margin: 0;
+}
+
+.admin-cards {
+  max-width: 100%;
+  width: 100%;
+  margin: 0;
+  gap: 28px;
+}
+
+.admin-dashboard-main section {
+  margin: 1rem 0;
+}
+
+.admin-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+}
+
+.kpi-card {
+  border: 1px solid #e3e8ee;
+  border-radius: 18px;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.kpi-label {
+  margin: 0;
+  color: #555;
+  font-size: 14px;
+}
+
+.kpi-value {
+  margin: 8px 0 0;
+  font-size: 28px;
+  font-weight: 700;
+  color: #0a2d8d;
+}
+
+.admin-action-card {
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.admin-icon {
+  font-size: 40px;
+  line-height: 1;
+}
+
+.admin-action-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.08);
+}
+
+.admin-action-card .btn {
+  width: fit-content;
+  margin-top: 6px;
+}
+
+.admin-activity ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.admin-activity li {
+  margin-bottom: 0.4rem;
+}
+
 .card {
   background-color: #ffffff;
   border-radius: 14px;
   padding: 30px 20px;
-  border: 1px solid #eef0f2;
+  border: 1px solid #e3e8ee;
   min-height: 180px;
 
   display: grid;
@@ -295,8 +371,8 @@ section, aside {
 }
 
 .trophy-icon {
-  width: 52px !important;
-  height: 52px !important;
+  width: 56px !important;
+  height: 56px !important;
 }
 
 .card h3 {
@@ -357,4 +433,61 @@ button {
 
 iframe {
     max-width: 100%;
+}
+
+.user-dashboard-page .site-header {
+  height: 25vh;
+  min-height: 220px;
+  align-items: flex-end;
+}
+
+.user-dashboard-page .site-header img[src*="logo"] {
+  left: 50%;
+  top: 62%;
+  max-width: 340px;
+}
+
+.user-dashboard-page .site-header .main-nav {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+.dashboard-main section,
+.dashboard-main aside {
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  main {
+    padding: 1rem;
+  }
+
+  .tabs-grid {
+    grid-template-columns: repeat(2, auto);
+    gap: 8px;
+    padding: 16px;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 24px 16px;
+  }
+
+  .main-nav ul li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .user-dashboard-page .site-header {
+    min-height: 220px;
+  }
+
+  .user-dashboard-page .site-header img[src*="logo"] {
+    top: 62%;
+    max-width: 230px;
+  }
 }

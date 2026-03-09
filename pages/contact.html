@@ -4,43 +4,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneos de Ping Pong - Contacto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+    <!-- Header con acciones de sesión -->
     <header class="site-header">
+        <div class="auth-buttons">
+            <div class="dropdown">
+                <button class="login-btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Mi perfil
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end">
+                    <li><a class="dropdown-item" href="user-dashboard.html">Mi perfil</a></li>
+                    <li><a class="dropdown-item" href="../index.html">Cerrar sesión</a></li>
+                </ul>
+            </div>
+        </div>
         <img src="../img/logo.png" alt="Logo de Torneos de Ping Pong">
-        <nav class="main-nav">
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="about.html">Sobre nosotros</a></li>
-                <li><a href="contact.html">Contacto</a></li>
-                <li><a href="tournaments.html">Torneos</a></li>
-                <li><a href="user-dashboard.html">Usuario</a></li>
-                <li><a href="admin-dashboard.html">Admin</a></li>
-            </ul>
-        </nav>
+        <img src="../img/banner2.png" alt="Banner de Torneos de Ping Pong">
     </header>
     <main>
+        <!-- Navegación secundaria del sitio -->
+        <nav class="tabs-grid" aria-label="Navegación principal">
+            <button class="tab" type="button" onclick="window.location.href='../index.html';">Home</button>
+            <button class="tab active" type="button">Torneos</button>
+            <button class="tab" type="button">Jugadores</button>
+            <button class="tab" type="button">Reglamento</button>
+            <button class="tab" type="button">Categorías</button>
+        </nav>
+
+        <!-- Formulario de contacto -->
         <section>
             <h1>Contacto</h1>
             <p>¿Tienes preguntas? Contáctanos.</p>
             <form action="#" method="post">
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" required>
+                <input type="text" id="name" name="name" class="form-control" required>
                 
                 <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
+                <input type="email" id="email" name="email" class="form-control" required>
                 
                 <label for="message">Mensaje:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
                 
-                <fieldset>
+                <fieldset class="border rounded p-3">
                     <legend>Estoy interesado en:</legend>
-                    <label><input type="checkbox" name="interest" value="tournaments"> Torneos</label>
-                    <label><input type="checkbox" name="interest" value="news"> Noticias</label>
+                    <label class="form-check"><input type="checkbox" class="form-check-input" name="interest" value="tournaments"> Torneos</label>
+                    <label class="form-check"><input type="checkbox" class="form-check-input" name="interest" value="news"> Noticias</label>
                 </fieldset>
                 
-                <button type="submit">Enviar</button>
+                <button type="submit" class="btn btn-primary">Enviar</button>
             </form>
         </section>
         <aside>
@@ -48,15 +62,16 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531673!3d-37.816279742021504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1f9c7b0b1e!2sFederation%20Square!5e0!3m2!1ses!2sau!4v1600000000000!5m2!1ses!2sau" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </aside>
     </main>
+    <!-- Footer -->
     <footer class="site-footer">
         <p>&copy; 2026 Torneos de Ping Pong. Todos los derechos reservados.</p>
         <nav class="main-nav">
             <ul>
                 <li><a href="contact.html">Contacto</a></li>
-                <li><a href="about.html">Sobre nosotros</a></li>
             </ul>
         </nav>
         <p>Síguenos en: <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> | <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></p>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
