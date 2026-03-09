@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torneos de Ping Pong - Contacto</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <img src="../img/logo.png" alt="Logo de Torneos de Ping Pong">
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="tournaments.html">Torneos</a></li>
+                <li><a href="user-dashboard.html">Usuario</a></li>
+                <li><a href="admin-dashboard.html">Admin</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Contacto</h1>
+            <p>¿Tienes preguntas? Contáctanos.</p>
+            <form action="#" method="post">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <fieldset>
+                    <legend>Estoy interesado en:</legend>
+                    <label><input type="checkbox" name="interest" value="tournaments"> Torneos</label>
+                    <label><input type="checkbox" name="interest" value="news"> Noticias</label>
+                </fieldset>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+        <aside>
+            <h2>Ubicación</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509374!2d144.95373531531673!3d-37.816279742021504!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf577d1f9c7b0b1e!2sFederation%20Square!5e0!3m2!1ses!2sau!4v1600000000000!5m2!1ses!2sau" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </aside>
+    </main>
+    <footer class="site-footer">
+        <p>&copy; 2026 Torneos de Ping Pong. Todos los derechos reservados.</p>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="contact.html">Contacto</a></li>
+                <li><a href="about.html">Sobre nosotros</a></li>
+            </ul>
+        </nav>
+        <p>Síguenos en: <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> | <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a></p>
+    </footer>
+</body>
+</html>

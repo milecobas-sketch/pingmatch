@@ -1,0 +1,360 @@
+/* Estilos básicos para PingMatch */
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #ffffff;
+  color: #0a0a0a;
+}
+
+.app {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 20px 40px;
+  display: grid;
+  gap: 28px;
+}
+
+.site-header {
+   background-image: url('../img/player.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  height: 25vh;
+  min-height: 220px;
+
+  position: relative;
+  padding: 1rem;
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.site-header::after{
+  content: "";
+  position: absolute;
+  inset: 0;                 /* top/right/bottom/left = 0 */
+  background: rgba(10,45,141,.5);
+  z-index: 1;
+}
+
+.site-header img[src*="banner2"]{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.site-header img[src*="logo"] {
+    position: absolute;
+    left: 55vw;
+    top: 62%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    max-width: 1020px;
+}
+
+.colabora-btn {
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    z-index: 20;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.3);
+}
+
+.colabora-btn:hover {
+    background-color: white;
+    color: #0a2d8d;
+}
+
+.auth-buttons {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    z-index: 20;
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn {
+    background-color: white;
+    color: #0a2d8d;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.login-btn:hover {
+    background-color: transparent;
+    color: white;
+}
+
+.register-btn {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 15px;
+    transition: background-color 0.3s, color 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+.register-btn:hover {
+    background-color: white;
+    color: #0a2d8d;
+}
+
+.tabs-grid {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  max-width: 100%;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: 1.5px solid #1e88e5;
+  background-color: #fff;
+  color: #1e88e5;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(30, 136, 229, 0.25);
+}
+
+.tab.active {
+  background-color: white;
+  color: #1e88e5;
+  box-shadow: 0 4px 10px rgba(30, 136, 229, 0.25);
+}
+
+.tab:hover:not(.active) {
+  background-color: #e3f2fd;
+}
+
+.tab.active:hover {
+  background-color: #e3f2fd;
+  color: #1e88e5;
+}
+
+.tab:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(30, 136, 229, 0.3);
+}
+
+.filters {  /* Buscador */
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  align-items: center;
+}
+
+.search input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.filters select {
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  font-size: 14px;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Altura fija para mejor control */
+    overflow: hidden;
+}
+
+.banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Extiende la imagen a lo ancho del header */
+    object-position: -100% 65%; /* Jugador 50% más a la izquierda */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(10, 45, 141, 0.815); /* Capa azul transparente */
+}
+
+.logo-overlay {
+    position: absolute;
+    top: 60%; /* 50% más abajo */
+    left: 50%;
+    transform: translateX(-50%); /* Centra horizontalmente */
+    width: 520px; /* 30% más grande */
+    z-index: 2; /* Sobre la overlay */
+}
+
+.main-nav {
+    background-color: #fffefe;
+    padding: 1rem;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+.main-nav a {
+    color: #0a2d8d;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.main-nav a[aria-current="page"] {
+    text-decoration: underline;
+}
+
+main {
+    padding: 2rem;
+    display: block;
+}
+
+section, aside {
+    margin: 1rem;
+}
+
+.cards {  /*Cards*/
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 30px 20px;
+  border: 1px solid #eef0f2;
+  min-height: 180px;
+
+  display: grid;
+  gap: 12px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.06);
+}
+
+.card img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.trophy-icon {
+  width: 52px !important;
+  height: 52px !important;
+}
+
+.card h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card p {
+  margin: 0;
+  font-size: 14px;
+  color: #555;
+}
+
+
+
+.site-footer {
+    background-color: #fffefe;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
+
+.site-footer .main-nav {
+    background-color: transparent;
+    padding: 0.5rem 0;
+}
+
+.footer-logo {
+    width: 21px;
+    vertical-align: middle;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+input, textarea {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #0a0a0a;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+iframe {
+    max-width: 100%;
+}
