@@ -1,0 +1,33 @@
+$primary-color: #0a2d8d;
+$accent-color: #1e88e5;
+$surface-color: #ffffff;
+$text-color: #0a0a0a;
+$muted-text: #555;
+$border-color: #e3e8ee;
+
+$radius-pill: 999px;
+$radius-md: 14px;
+$radius-lg: 18px;
+
+$transition-fast: 0.2s ease;
+$shadow-accent: 0 4px 10px rgba(30, 136, 229, 0.25);
+$shadow-soft: 0 10px 24px rgba(0, 0, 0, 0.06);
+
+/* Spacing scale used across components (replaces previous _listas.scss map) */
+$spacing-scale: (
+  sm: 8px,
+  md: 16px,
+  lg: 24px
+);
+
+$theme: light;
+$page-bg: $surface-color;
+$page-text: $text-color;
+
+/* Card measurements */
+$card-min: 300px;
+
+@if $theme == dark {
+  $page-bg: #0c1428;
+  $page-text: #edf2ff;
+}

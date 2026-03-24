@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneos de Ping Pong - Reglamento</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <header class="site-header">
@@ -24,46 +26,70 @@
         <img src="../img/banner2.png" alt="Banner de Torneos de Ping Pong">
     </header>
 
-    <main class="container py-4">
+    <main class="container py-4 reglamento-main">
         <nav class="tabs-grid" aria-label="Navegacion principal">
             <a class="tab" href="../index.html">Home</a>
             <a class="tab" href="tournaments.html">Torneos</a>
             <a class="tab" href="jugadores.html">Jugadores</a>
             <a class="tab active" href="reglamento.html">Reglamento</a>
-            <a class="tab" href="categorias.html">Categorias</a>
+            <a class="tab" href="categorias.html">Categorías</a>
         </nav>
 
-        <section class="card mt-4">
+        <section class="card mt-4 reglamento-hero">
             <div class="card-body">
-                <h1 class="h3">Reglamento Basico de Ping Pong</h1>
+                <h1 class="h2">Reglamento de Tenis de Mesa</h1>
                 <p>Estas son reglas generales para partidos recreativos y torneos estandar de tenis de mesa.</p>
-                <ul>
-                    <li>Un partido se juega al mejor de 5 o 7 sets, segun el torneo.</li>
-                    <li>Cada set se gana al llegar a 11 puntos con diferencia minima de 2.</li>
-                    <li>El saque cambia cada 2 puntos, excepto cuando hay empate de 10-10; alli cambia en cada punto.</li>
-                    <li>La pelota debe botar una vez en el propio campo del servidor y luego en el del rival durante el saque.</li>
-                    <li>No se puede tocar la mesa con la mano libre durante el punto.</li>
-                    <li>Si la pelota toca la red en el saque y cae correctamente, se repite el saque (let).</li>
-                    <li>Se cambia de lado al finalizar cada set y en el ultimo set cuando un jugador llega a 5 puntos.</li>
-                </ul>
             </div>
         </section>
 
-        <section class="card mt-4 mb-4">
+        <div class="reglamento-grid mt-4">
+            <section class="card regla-card regla-basicas">
+                <div class="card-body">
+                    <h4 class="regla-title"><i class="bi bi-trophy-fill" aria-hidden="true"></i> Reglas Básicas</h4>
+                    <p class="rule-item"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Ganador: </strong>El primer jugador en conseguir 11 puntos, con una diferencia mínima de dos puntos sobre el rival.</span></p>
+                    <p class="rule-item"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Sets: </strong> Los partidos son al mejor de 3, 5 o 7 sets.</span></p>
+                    <p class="rule-item"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Cambio de saque: </strong>Cada jugador sirve dos veces consecutivas, luego pasa el servicio al oponente.</span></p>
+                    <p class="rule-item"><i class="bi bi-check-circle-fill" aria-hidden="true"></i><span><strong>Empate a 10: </strong> Si el marcador llega a 10-10, el servicio cambia cada punto y gana quien consiga dos puntos de ventaja.</span></p>
+                </div>
+            </section>
+
+            <section class="card regla-card regla-saque">
+                <div class="card-body">
+                    <h4 class="regla-title"><i class="bi bi-hand-index-thumb-fill" aria-hidden="true"></i> El Saque o servicio</h4>
+                    <p class="rule-item"><i class="bi bi-bullseye" aria-hidden="true"></i><span><strong>¿Quién saca?: </strong>El primer jugador en sacar se determina de forma aleatoria. Cada jugador sacará dos veces pasando a continuación el saque al jugador contrario.</span></p>
+                    <p class="rule-item"><i class="bi bi-bullseye" aria-hidden="true"></i><span><strong>Ejecución: </strong>La pelota debe lanzarse al menos 16 cm hacia arriba desde la palma de la mano, por detrás de la línea de fondo, y ser golpeada por la paleta para botar primero en el campo propio y luego en el contrario.</span></p>
+                    <p class="rule-item"><i class="bi bi-bullseye" aria-hidden="true"></i><span><strong>Red en el saque: </strong> Si la pelota toca la red y cae en el campo contrario, es un "let" (repetición).</span></p>
+                    <p class="rule-item"><i class="bi bi-bullseye" aria-hidden="true"></i><span><strong>Punto perdido: </strong> Se pierde el punto si el saque no toca el campo contrario, bota más de una vez, o si la pelota toca la red y no pasa al campo contrario.</span></p>
+                </div>
+            </section>
+
+            <section class="card regla-card regla-desarrollo">
+                <div class="card-body">
+                    <h4 class="regla-title"><i class="bi bi-arrow-left-right" aria-hidden="true"></i> Desarrollo del partido</h4>
+                    <p class="rule-item"><i class="bi bi-play-circle-fill" aria-hidden="true"></i><span>Una vez la pelota está en juego comienza el periodo de rally. Cada jugador golpea la pelota para pasarla al lado del contrincante, puede ir de un lado a otro de forma indefinida. Se cambia de lado al finalizar cada set y en el último set cuando un jugador llega a 5 puntos.</span></p>
+                </div>
+            </section>
+        </div>
+
+        <section class="card mt-4 mb-4 reglamento-historia">
             <div class="card-body">
-                <h2 class="h4">Un Poco de Historia</h2>
+                <h2 class="h4 regla-title"><i class="bi bi-book-fill" aria-hidden="true"></i> Un poco de historia</h2>
                 <p>
-                    El ping pong, tambien conocido como tenis de mesa, nacio en Inglaterra a fines del siglo XIX.
-                    Surgio como una version de salon del tenis tradicional, jugada en interiores por familias y clubes.
+                    El ping pong, también conocido como tenis de mesa, nació en Inglaterra hacia fines del siglo XIX.
+                    Surgió como una versión de salón del tenis tradicional, pensada para jugarse en interiores durante reuniones sociales.
+                    En sus comienzos se utilizaban objetos improvisados, como libros para hacer de red y tapas de cajas como paletas,
+                    hasta que comenzaron a fabricarse los primeros elementos específicos para el juego.
                 </p>
                 <p>
-                    Al principio se usaban libros como red y tapas de cajas de cigarros como paletas. Con el tiempo,
-                    el deporte se estandarizo, aparecieron fabricantes especializados y se definieron reglas oficiales.
+                    Con el tiempo, el deporte fue ganando popularidad en clubes y espacios recreativos.
+                    A medida que su práctica se expandía, se fueron estableciendo reglas más claras y se desarrollaron materiales especializados,
+                    lo que permitió mejorar la calidad del juego. En 1926 se fundó la Federación Internacional de Tenis de Mesa (ITTF),
+                    marcando un punto clave en la organización y difusión mundial de este deporte.
                 </p>
                 <p>
-                    En 1926 se fundo la Federacion Internacional de Tenis de Mesa (ITTF), y desde entonces el deporte
-                    crecio en todo el mundo. Hoy es una disciplina olimpica, rapida, tecnica y muy popular tanto a nivel
-                    amateur como profesional.
+                    Desde entonces, el tenis de mesa ha evolucionado notablemente en velocidad, técnica y estrategia.
+                    Hoy es una disciplina olímpica reconocida en todo el mundo, practicada tanto a nivel recreativo como profesional.
+                    Su dinamismo y precisión lo convierten en un deporte accesible, competitivo y muy valorado por jugadores de todas las edades.
                 </p>
             </div>
         </section>

@@ -1,0 +1,28 @@
+{
+  "name": "coder_dw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass sass/styles.scss css/main.css --source-map",
+    "watch:css": "sass --watch sass/styles.scss css/main.css --source-map",
+    "build:prod": "sass sass/styles.scss css/main.min.css --style=compressed --no-source-map",
+    "build:min": "sass sass/styles.scss css/main.min.css --style=compressed --no-source-map",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/milecobas-sketch/pingmatch.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/milecobas-sketch/pingmatch/issues"
+  },
+  "homepage": "https://github.com/milecobas-sketch/pingmatch#readme",
+  "devDependencies": {
+    "sass": "^1.98.0"
+  }
+}

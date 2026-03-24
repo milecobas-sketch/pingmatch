@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneos de Ping Pong - Inicio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" type="image/png" href="img/logo.png">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
   <!-- Header principal -->
@@ -19,44 +20,64 @@
         <img src="img/logo.png" alt="Logo de Torneos de Ping Pong">
         <img src="img/banner2.png" alt="Banner de Torneos de Ping Pong">
     </header>
-    <main>
+    <main class="container py-4">
       <!-- Componente Bootstrap (sin impacto visual es para cumplir con entrega 2) -->
       <div class="alert alert-info visually-hidden" role="alert">Componente Bootstrap activo</div>
         <!-- Tabs / Navegación -->
     <nav class="tabs-grid" aria-label="Navegación principal">
-      <a class="tab active" href="./pages/tournaments.html">Torneos</a>
-      <a class="tab" href="./pages/jugadores.html">Jugadores</a>
-      <a class="tab" href="./pages/reglamento.html">Reglamento</a>
-      <a class="tab" href="./pages/categorias.html">Categorías</a>
+      <a class="tab active" href="index.html">Home</a>
+      <a class="tab" href="pages/tournaments.html">Torneos</a>
+      <a class="tab" href="pages/jugadores.html">Jugadores</a>
+      <a class="tab" href="pages/reglamento.html">Reglamento</a>
+      <a class="tab" href="pages/categorias.html">Categorías</a>
     </nav>
 
     <!-- Cards -->
     <section class="cards">
 
       <article class="card">
-        <img src="img/copa.png" alt="Icono de copa" width="48" height="48" class="trophy-icon" />
-        <h3>Creá y organizá tu torneo</h3>
-        <p>
-          Configurá el formato, elegí fechas y sede.
-        </p>
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/copa.png" alt="Icono de copa" width="48" height="48" class="trophy-icon" />
+            <h3>Creá y organizá tu torneo</h3>
+            <p>Configurá el formato, elegí fechas y sede.</p>
+          </div>
+          <div class="card-back">
+            <img src="img/copa.png" alt="Icono de copa" width="48" height="48" class="trophy-icon" />
+            <h3>Creá y organizá tu torneo</h3>
+            <p>Configurá el formato, elegí fechas y sede.</p>
+          </div>
+        </div>
       </article>
 
       <article class="card">
-        <img src="img/perfiles .png" alt="Icono de perfiles de jugadores" width="48" height="48" />
-        <h3>Creá perfiles, inscribite a torneos y mucho más</h3>
-        <p>
-          Registrate en torneos, consultá tu ranking y hacé seguimiento
-          de todas tus partidas.
-        </p>
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/perfiles.png" alt="Icono de perfiles de jugadores" width="48" height="48" class="trophy-icon" />
+            <h3>Creá perfiles, inscribite a torneos y mucho más</h3>
+            <p>Registrate en torneos, consultá tu ranking y hacé seguimiento de todas tus partidas.</p>
+          </div>
+          <div class="card-back">
+            <img src="img/perfiles.png" alt="Icono de perfiles de jugadores" width="48" height="48" class="trophy-icon" />
+            <h3>Creá perfiles, inscribite a torneos y mucho más</h3>
+            <p>Registrate en torneos, consultá tu ranking y hacé seguimiento de todas tus partidas.</p>
+          </div>
+        </div>
       </article>
 
       <article class="card">
-        <img src="img/paletas.png" alt="Icono de paletas" width="48" height="48" />
-        <h3>Seguimiento en vivo</h3>
-        <p>
-          Partidos en vivo, actualizaciones automáticas y estadísticas
-          al momento.
-        </p>
+        <div class="card-inner">
+          <div class="card-front">
+            <img src="img/paletas.png" alt="Icono de paletas" width="48" height="48" class="trophy-icon" />
+            <h3>Seguimiento en vivo</h3>
+            <p>Partidos en vivo, actualizaciones automáticas y estadísticas al momento.</p>
+          </div>
+          <div class="card-back">
+            <img src="img/paletas.png" alt="Icono de paletas" width="48" height="48" class="trophy-icon" />
+            <h3>Seguimiento en vivo</h3>
+            <p>Partidos en vivo, actualizaciones automáticas y estadísticas al momento.</p>
+          </div>
+        </div>
       </article>
 
     </section>

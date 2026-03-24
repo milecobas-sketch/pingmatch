@@ -1,0 +1,95 @@
+.reglamento-main {
+  .reglamento-hero,
+  .regla-card,
+  .reglamento-historia {
+    border-radius: 16px;
+    border: 1px solid #dbe3ee;
+    box-shadow: 0 8px 18px rgba(11, 34, 64, 0.08);
+  }
+
+  .reglamento-hero {
+    background: #f7faff;
+  }
+
+  .reglamento-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  .regla-card {
+    background: #ffffff;
+  }
+
+  .regla-basicas {
+    background: #eef5ff;
+  }
+
+  .regla-saque {
+    background: #eefbf3;
+  }
+
+  .regla-desarrollo {
+    background: #fff5ea;
+  }
+
+  .reglamento-historia {
+    background: #f9fbff;
+  }
+
+  .regla-title {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+    color: #1c2b3d;
+  }
+
+  .regla-title i {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(19, 54, 102, 0.12);
+    color: #173d72;
+    font-size: 1rem;
+  }
+
+  .rule-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.55rem;
+    margin-bottom: 0.7rem;
+    color: #253143;
+  }
+
+  .rule-item i {
+    flex-shrink: 0;
+    margin-top: 0.15rem;
+    color: #1f5da0;
+    font-size: 0.95rem;
+  }
+
+  .rule-item span {
+    line-height: 1.45;
+  }
+
+  .regla-saque .rule-item i {
+    color: #1f7a42;
+  }
+
+  .regla-desarrollo .rule-item i {
+    color: #b05c09;
+  }
+}
+
+@media (max-width: 991.98px) {
+  .reglamento-main {
+    .reglamento-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+}

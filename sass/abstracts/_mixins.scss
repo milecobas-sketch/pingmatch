@@ -1,0 +1,25 @@
+@use "../utilities/variables" as vars;
+
+@mixin btn-pill($bg, $color, $radius: vars.$radius-pill) {
+  background-color: $bg;
+  color: $color;
+  border-radius: $radius;
+  padding: 10px 18px;
+  border: 2px solid $bg;
+  cursor: pointer;
+  transition: background-color vars.$transition-fast, color vars.$transition-fast;
+}
+
+@mixin card-base {
+  background-color: vars.$surface-color;
+  border-radius: vars.$radius-md;
+  border: 1px solid vars.$border-color;
+  box-shadow: vars.$shadow-soft;
+}
+
+/* Responsive card placeholder for @extend usage */
+%card-base {
+  border-radius: 12px;
+  padding: 16px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+}

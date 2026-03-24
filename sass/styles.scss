@@ -1,0 +1,6 @@
+/* Entry SCSS — reexporta el bundle modular */
+
+@use "main";
+
+/* Este archivo actúa como punto de entrada único para compilación:
+   `sass/styles.scss` -> `css/main.css` */

@@ -1,0 +1,20 @@
+@use "abstracts/variables" as vars;
+@use "abstracts/mixins" as mixins;
+
+@use "base/base";
+
+@use "components/header";
+@use "layout/responsive";
+
+@use "components/navigation";
+@use "components/cards";
+@use "components/buttons";
+
+@use "pages/dashboard";
+@use "pages/categories";
+@use "pages/reglamento";
+
+@use "themes/theme";
+@use "vendors/bootstrap-overrides";
+
+/* `sass/main.scss` — punto de entrada SCSS modular */

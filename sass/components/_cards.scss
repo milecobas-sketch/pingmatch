@@ -1,0 +1,122 @@
+@use "../abstracts/variables" as vars;
+@use "sass:map" as map;
+@use "../abstracts/mixins" as mixins;
+
+/* Cards layout with nesting and simple operators */
+.cards {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(vars.$card-min, 1fr));
+	gap: map.get(vars.$spacing-scale, lg);
+	max-width: 1000px;
+	margin: 0 auto;
+
+	.card {
+		@media (min-width: 768px) { @include mixins.card-base; }
+		background-color: vars.$surface-color;
+		border-radius: 14px;
+		padding: map.get(vars.$spacing-scale, md) * 1.5;
+		border: 1px solid vars.$border-color;
+		min-height: 180px;
+		display: block;
+		position: relative;
+		perspective: 900px;
+		transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+		.card-inner {
+			width: 100%;
+			height: 100%;
+			position: relative;
+			transform-style: preserve-3d;
+			transition: transform 0.6s cubic-bezier(.2,.9,.3,1);
+		}
+
+		/* prevent back/front content from overflowing the card */
+		overflow: hidden;
+		box-sizing: border-box;
+
+		&:hover { transform: translateY(-4px); box-shadow: vars.$shadow-soft; }
+		&:hover .card-inner { transform: rotateY(180deg); }
+
+		.card-front,
+		.card-back {
+			position: absolute;
+			top: 0; left: 0; right: 0; bottom: 0;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			padding-top: map.get(vars.$spacing-scale, lg);
+			backface-visibility: hidden;
+			-webkit-backface-visibility: hidden;
+			padding: map.get(vars.$spacing-scale, lg);
+			box-sizing: border-box;
+		}
+
+		.card-front { z-index: 2; }
+		.card-front { z-index: 1; transform: rotateY(0deg) translateZ(0); }
+		.card-back { transform: rotateY(180deg) translateZ(0.1px); z-index: 2; }
+
+		/* ensure panels have a background so text remains visible when flipped */
+		.card-front, .card-back { background-color: vars.$surface-color; }
+
+		/* when hovering, make sure the back is on top */
+		&:hover .card-back { z-index: 3; }
+
+		/* fallback crossfade to ensure back text is visible on all browsers */
+		.card-front { opacity: 1; transition: opacity 0.35s ease; }
+		.card-back { opacity: 0; transition: opacity 0.35s ease; }
+		&:hover .card-front { opacity: 0; }
+		&:hover .card-back { opacity: 1; }
+
+		/* show only icon + title on front */
+		.card-front p { display: none; }
+		.card-back p { display: block; margin-top: map.get(vars.$spacing-scale, sm); overflow: auto; max-height: calc(100% - 6rem); }
+
+		img { width: 64px; height: 64px; object-fit: contain; margin-bottom: map.get(vars.$spacing-scale, sm); }
+		.trophy-icon { width: 56px !important; height: 56px !important; }
+
+		h3 { margin: 0; font-size: 16px; font-weight: 600; text-align: center; }
+		p { margin: 0; font-size: 14px; color: vars.$muted-text; text-align: center; }
+	}
+}
+
+/* Variantes específicas para la página de Torneos: no desplazar la tarjeta
+	 al pasar el cursor y centrar los botones dentro de la tarjeta. */
+.tournaments-cards .card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	/* desactivar transformaciones / sombras de hover para estas tarjetas */
+	transition: none;
+}
+.tournaments-cards .card:hover {
+	transform: none !important;
+	box-shadow: none !important;
+}
+.tournaments-cards .card .btn {
+	margin-top: 1rem;
+	/* asegurar centrado horizontal */
+	align-self: center;
+}
+
+/* Botón Inscribirse: siempre verde en la página Torneos */
+.tournaments-cards .card .btn.btn-success {
+	background-color: #28a745;
+	color: #fff;
+	border-color: #28a745;
+	transition: none;
+}
+.tournaments-cards .card .btn.btn-success:hover,
+.tournaments-cards .card .btn.btn-success:focus,
+.tournaments-cards .card .btn.btn-success:active {
+	background-color: #28a745;
+	color: #fff;
+	border-color: #28a745;
+	box-shadow: none;
+}
+
+
+.kpi-card { border: 1px solid #e3e8ee; border-radius: 18px; padding: 20px; background-color: vars.$surface-color; }
+.kpi-label { margin: 0; color: vars.$muted-text; font-size: 14px; }
+.kpi-value { margin: 8px 0 0; font-size: 28px; font-weight: 700; color: vars.$primary-color; }

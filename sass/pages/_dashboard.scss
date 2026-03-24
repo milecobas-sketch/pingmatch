@@ -1,0 +1,100 @@
+/* Dashboard page styles (stub) */
+
+.dashboard {
+  padding: 1rem;
+}
+
+.dashboard-main {
+  width: 100%;
+  max-width: none;
+}
+
+/* Ensure historial table uses available width without inner scrollbars */
+.dashboard-main .card { min-height: auto; }
+.dashboard-main .table-responsive { overflow: visible; }
+.dashboard-main table { color: #0a0a0a; }
+.dashboard-main table td, .dashboard-main table th { vertical-align: middle; }
+
+/* Force left/right columns to align at the top and make cards stretch the same height */
+.dashboard-main .row { align-items: flex-start; }
+.dashboard-main aside, .dashboard-main section { display: flex; }
+.dashboard-main .card { width: 100%; display: flex; flex-direction: column; }
+.dashboard-main .card-body { display: flex; flex-direction: column; }
+.dashboard-main .table-responsive { flex: 1 1 auto; }
+
+/* Profile + History layout: profile fixed, history fills remaining width */
+.dashboard-main .profile-history {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.dashboard-main .profile-history aside {
+  flex: 0 0 280px;
+  width: 280px;
+  min-width: 280px;
+}
+
+.dashboard-main .profile-history section {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.dashboard-main .profile-history .card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.dashboard-main .profile-history .card-body {
+  flex: 1 1 auto;
+}
+
+.dashboard-main .profile-history .table-responsive {
+  width: 100%;
+  overflow-x: visible;
+}
+
+.dashboard-main .profile-history table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.dashboard-main .profile-history table th,
+.dashboard-main .profile-history table td {
+  white-space: normal;
+  word-break: normal;
+  overflow-wrap: break-word;
+}
+
+/* Prevent brutal letter-by-letter breaks in profile content */
+.dashboard-main .profile-history aside,
+.dashboard-main .profile-history aside * {
+  word-break: normal;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+/* Ensure images inside profile scale and don't force tiny columns */
+.dashboard-main .profile-history aside img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 767.98px) {
+  .dashboard-main .profile-history {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .dashboard-main .profile-history aside {
+    flex: 1 1 auto;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .dashboard-main .profile-history section {
+    width: 100%;
+  }
+}

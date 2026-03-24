@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneos de Ping Pong - Categorías</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="icon" type="image/png" href="../img/logo.png">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <header class="site-header">
@@ -24,7 +25,7 @@
         <img src="../img/banner2.png" alt="Banner de Torneos de Ping Pong">
     </header>
 
-    <main class="container py-4">
+    <main class="container py-4 categories-main">
         <nav class="tabs-grid" aria-label="Navegación principal">
             <a class="tab" href="../index.html">Home</a>
             <a class="tab" href="tournaments.html">Torneos</a>
@@ -33,16 +34,73 @@
             <a class="tab active" href="categorias.html">Categorías</a>
         </nav>
 
-        <section class="card mt-4 mb-4">
+        <section class="card mt-4 mb-4 categories-card">
             <div class="card-body">
-                <h1 class="h3">Categorías</h1>
-                <p>Conocé las categorías disponibles para competir en torneos de ping pong.</p>
-                <ul>
-                    <li>Principiante</li>
-                    <li>Intermedio</li>
-                    <li>Avanzado</li>
-                    <li>Open</li>
-                </ul>
+                <h1 class="h3">Categorías TMT</h1>
+                <p>Ranking orientativo de divisiones para torneos de tenis de mesa. Cada categoría agrupa nivel de juego y rango de rating estimado.</p>
+
+                <div class="division-table-wrapper">
+                    <table class="division-table" aria-label="Ranking de divisiones">
+                        <thead>
+                            <tr>
+                                <th>División</th>
+                                <th>Descripción</th>
+                                <th>Nivel técnico aproximado</th>
+                                <th>Rating</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="division-row division-1">
+                                <td data-label="División"><span class="division-badge">1ra</span> Primera</td>
+                                <td data-label="Descripción">Jugadores de elite</td>
+                                <td data-label="Nivel técnico aproximado">Dominio avanzado de táctica, lectura del juego y consistencia a ritmo competitivo nacional.</td>
+                                <td data-label="Rating">2100+</td>
+                            </tr>
+                            <tr class="division-row division-2">
+                                <td data-label="División"><span class="division-badge">2da</span> Segunda</td>
+                                <td data-label="Descripción">Alto rendimiento</td>
+                                <td data-label="Nivel técnico aproximado">Excelente control de efectos y transiciones ataque-defensa, con toma de decisiones sólida en puntos largos.</td>
+                                <td data-label="Rating">1800-2099</td>
+                            </tr>
+                            <tr class="division-row division-3">
+                                <td data-label="División"><span class="division-badge">3ra</span> Tercera</td>
+                                <td data-label="Descripción">Competitivo avanzado</td>
+                                <td data-label="Nivel técnico aproximado">Buena variedad de servicios, bloqueos y topspin; mantiene regularidad en torneos regionales.</td>
+                                <td data-label="Rating">1600-1799</td>
+                            </tr>
+                            <tr class="division-row division-4">
+                                <td data-label="División"><span class="division-badge">4ta</span> Cuarta</td>
+                                <td data-label="Descripción">Intermedio superior</td>
+                                <td data-label="Nivel técnico aproximado">Construye puntos con criterio, combina defensa activa y ataque, y minimiza errores no forzados.</td>
+                                <td data-label="Rating">1450-1599</td>
+                            </tr>
+                            <tr class="division-row division-5">
+                                <td data-label="División"><span class="division-badge">5ta</span> Quinta</td>
+                                <td data-label="Descripción">Intermedio</td>
+                                <td data-label="Nivel técnico aproximado">Control general correcto, ejecución estable de golpes base y comprensión táctica en desarrollo.</td>
+                                <td data-label="Rating">1300-1449</td>
+                            </tr>
+                            <tr class="division-row division-6">
+                                <td data-label="División"><span class="division-badge">6ta</span> Sexta</td>
+                                <td data-label="Descripción">Intermedio inicial</td>
+                                <td data-label="Nivel técnico aproximado">Sostiene peloteos con intención, mejora colocación y comienza a variar efectos en servicio.</td>
+                                <td data-label="Rating">1150-1299</td>
+                            </tr>
+                            <tr class="division-row division-7">
+                                <td data-label="División"><span class="division-badge">7ma</span> Séptima</td>
+                                <td data-label="Descripción">Formación competitiva</td>
+                                <td data-label="Nivel técnico aproximado">Fundamentos en consolidación, foco en regularidad, desplazamientos y lectura básica de spin.</td>
+                                <td data-label="Rating">1000-1149</td>
+                            </tr>
+                            <tr class="division-row division-8">
+                                <td data-label="División"><span class="division-badge">8va</span> Octava</td>
+                                <td data-label="Descripción">Iniciación</td>
+                                <td data-label="Nivel técnico aproximado">Primeros pasos en competencia, aprendizaje de técnica base y reglas de juego en situación real.</td>
+                                <td data-label="Rating">0-999</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
     </main>
